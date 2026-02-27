@@ -1,0 +1,7 @@
+{
+  "id": "honed:wood_handle",
+  "inputMaterialId": "honed:wood",
+  "outputPartType": "handle",
+  "rules": ["carve_any"],
+  "optimalSteps": 3
+}

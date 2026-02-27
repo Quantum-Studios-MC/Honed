@@ -1,0 +1,20 @@
+{
+  "id": "honed:iron",
+  "displayName": "Iron",
+  "tier": 2,
+  "processingType": "FORGE",
+  "forgingProfileId": "",
+  "stats": {
+    "speed": 6.0,
+    "durability": 250,
+    "harvestLevel": 2,
+    "attackDamage": 0.0,
+    "attackSpeed": 0.0,
+    "enchantability": 14,
+    "handleMultiplier": 1.0
+  },
+  "traitIds": [],
+  "workingTempMin": 800,
+  "workingTempMax": 1200,
+  "meltingTemp": 1500
+}

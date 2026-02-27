@@ -1,0 +1,11 @@
+item.honed.pickaxe.name=Honed Pickaxe
+item.honed.sword.name=Honed Sword
+item.honed.shovel.name=Honed Shovel
+item.honed.axe.name=Honed Axe
+item.honed.part.name=Honed Part
+honed.tooltip.durability=Durability: %.0f
+honed.tooltip.mining_speed=Mining Speed: %.2f
+honed.tooltip.attack_damage=Attack Damage: %.2f
+honed.tooltip.harvest_level=Harvest Level: %.0f
+honed.tooltip.attack_speed=Attack Speed: %.2f
+honed.tooltip.enchantability=Enchantability: %.0f

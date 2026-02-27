@@ -1,0 +1,20 @@
+{
+  "id": "honed:wood",
+  "displayName": "Wood",
+  "tier": 0,
+  "processingType": "CARVE",
+  "forgingProfileId": "",
+  "stats": {
+    "speed": 2.0,
+    "durability": 59,
+    "harvestLevel": 0,
+    "attackDamage": 0.0,
+    "attackSpeed": 0.0,
+    "enchantability": 15,
+    "handleMultiplier": 1.0
+  },
+  "traitIds": [],
+  "workingTempMin": 0,
+  "workingTempMax": 0,
+  "meltingTemp": 0
+}

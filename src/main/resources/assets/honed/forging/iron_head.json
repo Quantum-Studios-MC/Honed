@@ -1,0 +1,7 @@
+{
+  "id": "honed:iron_head",
+  "inputMaterialId": "honed:iron",
+  "outputPartType": "head",
+  "rules": ["hammer_any"],
+  "optimalSteps": 5
+}

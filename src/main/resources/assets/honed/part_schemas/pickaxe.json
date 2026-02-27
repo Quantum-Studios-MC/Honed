@@ -1,0 +1,13 @@
+{
+  "toolType": "pickaxe",
+  "partSlots": {
+    "head": {
+      "materialId": "",
+      "quality": 0
+    },
+    "handle": {
+      "materialId": "",
+      "quality": 0
+    }
+  }
+}
