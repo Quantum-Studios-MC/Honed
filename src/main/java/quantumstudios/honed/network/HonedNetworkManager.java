@@ -16,6 +16,7 @@ import net.minecraftforge.fml.common.network.internal.FMLProxyPacket;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import quantumstudios.honed.Honed;
+import quantumstudios.honed.network.packet.SPacketMinigame;
 
 public final class HonedNetworkManager {
     private static final Object2ByteMap<Class<? extends CPacketBase>> clientboundPacketIDs = new Object2ByteArrayMap<>();
@@ -24,6 +25,8 @@ public final class HonedNetworkManager {
     private static final Byte2ObjectMap<SPacketBase> serverboundPackets = new Byte2ObjectArrayMap<>();
     private static boolean packetsRegistered = false;
     private static void registerPackets() {
+        register(new SPacketMinigame(), 0);
+
         packetsRegistered = true;
     }
     private static void register(CPacketBase packet, int id) {
@@ -64,7 +67,7 @@ public final class HonedNetworkManager {
         }
 
         try {
-            handler.handle(packet, player, mc);
+            handler.handle(new PacketBuffer(packet.payload()), player, mc);
         } catch (Exception e) {
             Honed.LOGGER.error("Exception handling clientbound packet {}: {}", handler.name(), e.toString());
         }
@@ -88,7 +91,7 @@ public final class HonedNetworkManager {
         }
 
         try {
-            handler.handle(packet, player);
+            handler.handle(new PacketBuffer(packet.payload()), player);
         } catch (Exception e) {
             Honed.LOGGER.error("Exception handling serverbound packet {}: {}", handler.name(), e.toString());
         }

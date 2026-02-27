@@ -1,6 +1,7 @@
 package quantumstudios.honed;
 
 import net.minecraft.block.Block;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -16,10 +17,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.minecraftforge.event.RegistryEvent;
+import quantumstudios.honed.item.color.ItemPartColor;
+import quantumstudios.honed.item.color.ItemToolColor;
 import quantumstudios.honed.network.HonedNetworkManager;
 import quantumstudios.honed.proxy.CommonProxy;
 import quantumstudios.honed.registry.HonedBlocks;
-import quantumstudios.honed.registry.HonedGUIs;
 import quantumstudios.honed.registry.HonedItems;
 import quantumstudios.honed.data.loader.JsonDataLoader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -63,7 +65,7 @@ public class Honed {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        NetworkRegistry.INSTANCE.registerGuiHandler(this, new HonedGUIs.Handler());
+
     }
 
     @SubscribeEvent
@@ -87,5 +89,21 @@ public class Honed {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
         HonedItems.registerModels();
+    }
+
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public static void registerItemColors(ColorHandlerEvent.Item event) {
+        event.getItemColors().registerItemColorHandler(
+                new ItemPartColor(),
+                HonedItems.PART
+        );
+        event.getItemColors().registerItemColorHandler(
+                new ItemToolColor(),
+                HonedItems.PICKAXE,
+                HonedItems.SWORD,
+                HonedItems.SHOVEL,
+                HonedItems.AXE
+        );
     }
 }

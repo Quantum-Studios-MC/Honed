@@ -5,7 +5,9 @@ import java.util.Collections;
 import java.util.Set;
 
 public class ItemHonedShovel extends ItemHonedTool {
-    public ItemHonedShovel() { super("shovel"); }
+    public ItemHonedShovel() {
+        super("shovel");
+    }
 
     @Override
     public Set<String> getToolClasses(ItemStack stack) {

@@ -1,5 +1,5 @@
 {
   "id": "honed:pickaxe",
   "displayName": "Pickaxe",
-  "requiredParts": ["head", "handle"]
+  "requiredParts": ["handle", "head", "binder"]
 }

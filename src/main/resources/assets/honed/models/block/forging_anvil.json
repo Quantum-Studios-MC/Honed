@@ -1,9 +1,9 @@
 {
 	"textures": {
-		"particle": "blocks/anvil_base",
-		"log_side": "blocks/log_oak",
-		"log_top": "blocks/log_oak_top",
-		"metal": "blocks/anvil_base"
+		"particle": "minecraft:blocks/anvil_base",
+		"log_side": "minecraft:blocks/log_oak",
+		"log_top": "minecraft:blocks/log_oak_top",
+		"metal": "minecraft:blocks/anvil_base"
 	},
 	"elements": [
 		{
