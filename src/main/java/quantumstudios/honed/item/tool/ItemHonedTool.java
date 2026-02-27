@@ -66,7 +66,7 @@ public abstract class ItemHonedTool extends ItemTool {
 
     @Override
     public String getItemStackDisplayName(ItemStack stack) {
-        return I18n.format(this.getTranslationKey(stack) + ".item", "materialtest");
+        return I18n.format(this.getTranslationKey(stack) + ".name", "materialtest");
     }
 
     @SideOnly(Side.CLIENT)
