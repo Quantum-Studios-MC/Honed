@@ -2,29 +2,40 @@
 tile.honed.forging_anvil.name=Forging Anvil
 
 ## ITEMS
-item.honed.pickaxe.name=Honed Pickaxe
-item.honed.sword.name=Honed Sword
-item.honed.shovel.name=Honed Shovel
-item.honed.axe.name=Honed Axe
-item.honed.part.name=Honed Part
+item.honed.part.name=%s Part
+item.honed.part_handle.name=%s Handle
+item.honed.part_binder.name=%s Binder
+item.honed.part_pickaxe_head.name=%s Pickaxe Head
+item.honed.part_sword_head.name=%s Sword Blade
+item.honed.part_shovel_head.name=%s Shovel Blade
+item.honed.part_axe_head.name=%s Axe Head
+
+item.honed.pickaxe.name=%s Pickaxe
+item.honed.sword.name=%s Sword
+item.honed.shovel.name=%s Shovel
+item.honed.axe.name=%s Axe
+
 item.honed.pickaxe.tooltip.durability=Durability: %.0f
 item.honed.pickaxe.tooltip.miningSpeed=Mining Speed: %.2f
 item.honed.pickaxe.tooltip.harvestLevel=Harvest Level: %.0f
 item.honed.pickaxe.tooltip.attackDamage=Attack Damage: %.2f
 item.honed.pickaxe.tooltip.attackSpeed=Attack Speed: %.2f
 item.honed.pickaxe.tooltip.enchantability=Enchantability: %.0f
+
 item.honed.sword.tooltip.durability=Durability: %.0f
 item.honed.sword.tooltip.miningSpeed=Mining Speed: %.2f
 item.honed.sword.tooltip.harvestLevel=Harvest Level: %.0f
 item.honed.sword.tooltip.attackDamage=Attack Damage: %.2f
 item.honed.sword.tooltip.attackSpeed=Attack Speed: %.2f
 item.honed.sword.tooltip.enchantability=Enchantability: %.0f
+
 item.honed.shovel.tooltip.durability=Durability: %.0f
 item.honed.shovel.tooltip.miningSpeed=Mining Speed: %.2f
 item.honed.shovel.tooltip.harvestLevel=Harvest Level: %.0f
 item.honed.shovel.tooltip.attackDamage=Attack Damage: %.2f
 item.honed.shovel.tooltip.attackSpeed=Attack Speed: %.2f
 item.honed.shovel.tooltip.enchantability=Enchantability: %.0f
+
 item.honed.axe.tooltip.durability=Durability: %.0f
 item.honed.axe.tooltip.miningSpeed=Mining Speed: %.2f
 item.honed.axe.tooltip.harvestLevel=Harvest Level: %.0f

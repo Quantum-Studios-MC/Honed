@@ -60,7 +60,10 @@ public final class HonedItems {
     public static void registerModels() {
         model(FORGING_ANVIL);
 
-        model(PART);
+        for (int part = 0; part < ItemHonedPart.NAME_LOOKUP.length; part++) {
+            model(PART, part, "part_" + ItemHonedPart.NAME_LOOKUP[part]);
+        }
+
         model(PICKAXE);
         model(SWORD);
         model(SHOVEL);

@@ -5,7 +5,9 @@ import java.util.Collections;
 import java.util.Set;
 
 public class ItemHonedPickaxe extends ItemHonedTool {
-    public ItemHonedPickaxe() { super("pickaxe"); }
+    public ItemHonedPickaxe() {
+        super("pickaxe");
+    }
 
     @Override
     public Set<String> getToolClasses(ItemStack stack) {

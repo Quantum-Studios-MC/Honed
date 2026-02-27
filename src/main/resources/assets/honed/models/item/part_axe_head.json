@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "honed:item/part"
+    "layer0": "honed:item/part_axe_head"
   }
 }

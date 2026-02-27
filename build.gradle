@@ -146,6 +146,8 @@ dependencies {
         testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     }
+
+    implementation rfg.deobf("curse.maven:modularui-624243:7622979")
 }
 
 apply from: 'gradle/scripts/dependencies.gradle'

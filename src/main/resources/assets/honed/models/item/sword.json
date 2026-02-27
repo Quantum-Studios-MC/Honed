@@ -1,6 +1,8 @@
 {
-  "parent": "item/handheld",
+  "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "honed:items/sword"
+    "layer0": "honed:item/overlay_handle_alt",
+    "layer1": "honed:item/overlay_sword_head",
+    "layer2": "honed:item/overlay_sword_guard"
   }
 }

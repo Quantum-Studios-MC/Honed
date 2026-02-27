@@ -1,11 +1,15 @@
 {
   "toolType": "pickaxe",
   "partSlots": {
+    "handle": {
+      "materialId": "",
+      "quality": 0
+    },
     "head": {
       "materialId": "",
       "quality": 0
     },
-    "handle": {
+    "binder": {
       "materialId": "",
       "quality": 0
     }

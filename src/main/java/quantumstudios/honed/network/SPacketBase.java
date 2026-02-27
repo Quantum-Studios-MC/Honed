@@ -7,9 +7,11 @@ import quantumstudios.honed.Tags;
 
 //Serverbound packet
 public abstract class SPacketBase {
-    public abstract String name(); //For logging purposes
+    public String name() {
+        return this.getClass().getSimpleName();
+    }
 
-    public abstract void handle(FMLProxyPacket packet, EntityPlayer player);
+    public abstract void handle(PacketBuffer data, EntityPlayer player);
 
     protected static PacketBuffer buf(Class<? extends SPacketBase> clazz) {
         return HonedNetworkManager.buf(clazz);

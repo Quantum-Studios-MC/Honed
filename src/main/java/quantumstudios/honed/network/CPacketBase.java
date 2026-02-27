@@ -10,10 +10,12 @@ import quantumstudios.honed.Tags;
 
 //Clientbound packet
 public abstract class CPacketBase {
-    public abstract String name(); //Name for logging
+    public String name() {
+        return this.getClass().getSimpleName();
+    }
 
     @SideOnly(Side.CLIENT)
-    public abstract void handle(FMLProxyPacket packet, EntityPlayerSP player, Minecraft mc);
+    public abstract void handle(PacketBuffer data, EntityPlayerSP player, Minecraft mc);
 
     protected static PacketBuffer buf(Class<? extends CPacketBase> clazz) {
         return HonedNetworkManager.buf(clazz);
