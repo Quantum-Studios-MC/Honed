@@ -26,6 +26,7 @@ public final class HonedItems {
     public static Item SWORD;
     public static Item SHOVEL;
     public static Item AXE;
+    public static Item HOE;
 
     public static void register(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();

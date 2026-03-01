@@ -3,6 +3,7 @@ package quantumstudios.honed.api;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import quantumstudios.honed.data.trait.TraitDefinition;
+import quantumstudios.honed.registry.HonedRegistries;
 
 import java.util.*;
 
@@ -22,6 +23,13 @@ public class TraitContext {
             activeTraits.put(rl, new TraitInstance(def, existing.level + level));
         } else {
             activeTraits.put(rl, new TraitInstance(def, level));
+        }
+    }
+
+    public void addTrait(String traitId) {
+        TraitDefinition def = HonedRegistries.getTrait(traitId);
+        if (def != null) {
+            addTrait(def, 1);
         }
     }
 

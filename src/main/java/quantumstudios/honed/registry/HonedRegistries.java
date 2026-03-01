@@ -17,6 +17,7 @@ public final class HonedRegistries {
     public static final Map<String, ToolSchema>         TOOL_SCHEMAS    = new HashMap<>();
     public static final Map<String, ForgingRecipe>      FORGING    = new HashMap<>();
     public static final Map<String, ComponentType>      COMPONENT_TYPES = new HashMap<>();
+    public static final Map<String, quantumstudios.honed.data.knapping.KnappingRecipeData> KNAPPING = new HashMap<>();
 
     public static MaterialDefinition getMaterial(String id) {
         MaterialDefinition mat = MATERIALS.getOrDefault(id, MATERIALS.get("honed:fallback"));

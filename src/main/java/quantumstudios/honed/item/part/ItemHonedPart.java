@@ -32,4 +32,18 @@ public class ItemHonedPart extends Item {
             }
         }
     }
+
+    public static int getMetaForPartType(String partType) {
+        for (int i = 0; i < NAME_LOOKUP.length; i++) {
+            if (NAME_LOOKUP[i].equals(partType)) {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    public static String getPartTypeForMeta(int meta) {
+        if (meta < 0 || meta >= NAME_LOOKUP.length) return "handle";
+        return NAME_LOOKUP[meta];
+    }
 }

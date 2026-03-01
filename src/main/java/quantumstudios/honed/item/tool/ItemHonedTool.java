@@ -119,7 +119,7 @@ public abstract class ItemHonedTool extends ItemTool {
             String primarySlot = null;
             for (Map.Entry<String, PartSchema.SlotDef> entry : schema.partSlots.entrySet()) {
                 PartSchema.SlotDef def = entry.getValue();
-                if (def.isPrimary || def.primary) {
+                if (def.isPrimary) {
                     primarySlot = entry.getKey();
                     break;
                 }

@@ -9,5 +9,13 @@ public class PartSchema {
     public static class SlotDef {
         public float statWeight = 1.0f;
         public boolean isPrimary = false;
+        
+        public String getPartType(String slotName) {
+            return slotName;
+        }
+        
+        public boolean getPrimary() {
+            return isPrimary;
+        }
     }
 }

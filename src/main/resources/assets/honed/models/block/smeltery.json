@@ -1,6 +1,138 @@
 {
-  "parent": "block/cube_all",
   "textures": {
-    "all": "minecraft:blocks/furnace_top"
-  }
+    "particle":  "minecraft:blocks/nether_brick",
+    "stone":     "minecraft:blocks/stonebrick",
+    "stone_top": "minecraft:blocks/stonebrick",
+    "brick":     "minecraft:blocks/nether_brick",
+    "rim":       "minecraft:blocks/iron_block",
+    "basin":     "minecraft:blocks/obsidian"
+  },
+  "elements": [
+    {
+      "comment": "base slab",
+      "from": [0, 0, 0],
+      "to":   [16, 4, 16],
+      "faces": {
+        "north": {"uv": [0, 12, 16, 16], "texture": "#stone"},
+        "east":  {"uv": [0, 12, 16, 16], "texture": "#stone"},
+        "south": {"uv": [0, 12, 16, 16], "texture": "#stone"},
+        "west":  {"uv": [0, 12, 16, 16], "texture": "#stone"},
+        "up":    {"uv": [0,  0, 16, 16], "texture": "#stone_top"},
+        "down":  {"uv": [0,  0, 16, 16], "texture": "#stone_top", "cullface": "down"}
+      }
+    },
+    {
+      "comment": "north wall",
+      "from": [0, 4, 0],
+      "to":   [16, 14, 3],
+      "faces": {
+        "north": {"uv": [0, 2, 16, 12], "texture": "#brick", "cullface": "north"},
+        "east":  {"uv": [0, 2,  3, 12], "texture": "#brick"},
+        "south": {"uv": [0, 2, 16, 12], "texture": "#brick"},
+        "west":  {"uv": [0, 2,  3, 12], "texture": "#brick"},
+        "up":    {"uv": [0,  0, 16,  3], "texture": "#rim"},
+        "down":  {"uv": [0,  0, 16,  3], "texture": "#brick"}
+      }
+    },
+    {
+      "comment": "south wall",
+      "from": [0, 4, 13],
+      "to":   [16, 14, 16],
+      "faces": {
+        "north": {"uv": [0, 2, 16, 12], "texture": "#brick"},
+        "east":  {"uv": [0, 2,  3, 12], "texture": "#brick"},
+        "south": {"uv": [0, 2, 16, 12], "texture": "#brick", "cullface": "south"},
+        "west":  {"uv": [0, 2,  3, 12], "texture": "#brick"},
+        "up":    {"uv": [0,  0, 16,  3], "texture": "#rim"},
+        "down":  {"uv": [0,  0, 16,  3], "texture": "#brick"}
+      }
+    },
+    {
+      "comment": "west wall",
+      "from": [0, 4, 3],
+      "to":   [3, 14, 13],
+      "faces": {
+        "north": {"uv": [3, 2,  6, 12], "texture": "#brick"},
+        "east":  {"uv": [0, 2, 10, 12], "texture": "#brick"},
+        "south": {"uv": [3, 2,  6, 12], "texture": "#brick"},
+        "west":  {"uv": [0, 2, 10, 12], "texture": "#brick", "cullface": "west"},
+        "up":    {"uv": [0,  0,  3, 10], "texture": "#rim"},
+        "down":  {"uv": [0,  0,  3, 10], "texture": "#brick"}
+      }
+    },
+    {
+      "comment": "east wall",
+      "from": [13, 4, 3],
+      "to":   [16, 14, 13],
+      "faces": {
+        "north": {"uv": [3,  2,  6, 12], "texture": "#brick"},
+        "east":  {"uv": [0,  2, 10, 12], "texture": "#brick", "cullface": "east"},
+        "south": {"uv": [3,  2,  6, 12], "texture": "#brick"},
+        "west":  {"uv": [0,  2, 10, 12], "texture": "#brick"},
+        "up":    {"uv": [0,  0,  3, 10], "texture": "#rim"},
+        "down":  {"uv": [0,  0,  3, 10], "texture": "#brick"}
+      }
+    },
+    {
+      "comment": "inner basin floor",
+      "from": [3, 4, 3],
+      "to":   [13, 5, 13],
+      "faces": {
+        "up":   {"uv": [3, 3, 13, 13], "texture": "#basin"},
+        "down": {"uv": [3, 3, 13, 13], "texture": "#brick"}
+      }
+    },
+    {
+      "comment": "top rim – north",
+      "from": [0, 14, 0],
+      "to":   [16, 16, 3],
+      "faces": {
+        "north": {"uv": [0, 0, 16,  2], "texture": "#rim", "cullface": "north"},
+        "east":  {"uv": [0, 0,  3,  2], "texture": "#rim"},
+        "south": {"uv": [0, 0, 16,  2], "texture": "#rim"},
+        "west":  {"uv": [0, 0,  3,  2], "texture": "#rim"},
+        "up":    {"uv": [0, 0, 16,  3], "texture": "#rim"},
+        "down":  {"uv": [0, 0, 16,  3], "texture": "#rim"}
+      }
+    },
+    {
+      "comment": "top rim – south",
+      "from": [0, 14, 13],
+      "to":   [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16,  2], "texture": "#rim"},
+        "east":  {"uv": [0, 0,  3,  2], "texture": "#rim"},
+        "south": {"uv": [0, 0, 16,  2], "texture": "#rim", "cullface": "south"},
+        "west":  {"uv": [0, 0,  3,  2], "texture": "#rim"},
+        "up":    {"uv": [0, 0, 16,  3], "texture": "#rim"},
+        "down":  {"uv": [0, 0, 16,  3], "texture": "#rim"}
+      }
+    },
+    {
+      "comment": "top rim – west",
+      "from": [0, 14, 3],
+      "to":   [3, 16, 13],
+      "faces": {
+        "north": {"uv": [0, 0,  3,  2], "texture": "#rim"},
+        "east":  {"uv": [0, 0, 10,  2], "texture": "#rim"},
+        "south": {"uv": [0, 0,  3,  2], "texture": "#rim"},
+        "west":  {"uv": [0, 0, 10,  2], "texture": "#rim", "cullface": "west"},
+        "up":    {"uv": [0, 0,  3, 10], "texture": "#rim"},
+        "down":  {"uv": [0, 0,  3, 10], "texture": "#rim"}
+      }
+    },
+    {
+      "comment": "top rim – east",
+      "from": [13, 14, 3],
+      "to":   [16, 16, 13],
+      "faces": {
+        "north": {"uv": [0, 0,  3,  2], "texture": "#rim"},
+        "east":  {"uv": [0, 0, 10,  2], "texture": "#rim", "cullface": "east"},
+        "south": {"uv": [0, 0,  3,  2], "texture": "#rim"},
+        "west":  {"uv": [0, 0, 10,  2], "texture": "#rim"},
+        "up":    {"uv": [0, 0,  3, 10], "texture": "#rim"},
+        "down":  {"uv": [0, 0,  3, 10], "texture": "#rim"}
+      }
+    }
+  ]
 }

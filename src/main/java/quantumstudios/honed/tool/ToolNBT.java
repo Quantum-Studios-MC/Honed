@@ -233,6 +233,39 @@ public final class ToolNBT {
         part.setInteger(QUALITY, quality);
     }
 
+    public static int getLevel(ItemStack stack) {
+        return getStat(stack, "level") != 0.0f ? (int)getStat(stack, "level") : 1;
+    }
+
+    public static int getXpProgress(ItemStack stack) {
+        return getXp(stack);
+    }
+
+    public static int getXpToNextLevel(ItemStack stack) {
+        int level = getLevel(stack);
+        return (level * 100);
+    }
+
+    public static int getPartQuality(ItemStack stack) {
+        if (!stack.hasTagCompound()) return 0;
+        NBTTagCompound nbt = stack.getTagCompound();
+        if (nbt.hasKey(PART_TAG)) {
+            return nbt.getCompoundTag(PART_TAG).getInteger(QUALITY);
+        }
+        return 0;
+    }
+
+    public static void addXp(ItemStack stack, int amount) {
+        int current = getXp(stack);
+        setXp(stack, current + amount);
+        int level = getLevel(stack);
+        int maxXp = getXpToNextLevel(stack);
+        if (current + amount >= maxXp) {
+            setXp(stack, 0);
+            setStat(stack, "level", level + 1);
+        }
+    }
+
     private static NBTTagCompound getOrCreateTag(ItemStack stack) {
         if (!stack.hasTagCompound()) stack.setTagCompound(new NBTTagCompound());
         return stack.getTagCompound();

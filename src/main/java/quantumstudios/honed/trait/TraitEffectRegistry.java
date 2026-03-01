@@ -1,6 +1,7 @@
 package quantumstudios.honed.trait;
 
 import quantumstudios.honed.api.ITraitEffect;
+import quantumstudios.honed.api.TraitContext;
 import quantumstudios.honed.registry.HonedRegistries;
 import quantumstudios.honed.tool.ToolNBT;
 import quantumstudios.honed.item.tool.ItemHonedTool;
@@ -66,5 +67,31 @@ public final class TraitEffectRegistry {
             }
         }
         return effects;
+    }
+
+    public static TraitContext buildContext(ItemStack stack) {
+        TraitContext ctx = new TraitContext(stack);
+        if (!(stack.getItem() instanceof ItemHonedTool)) return ctx;
+        ItemHonedTool tool = (ItemHonedTool) stack.getItem();
+        PartSchema schema = HonedRegistries.getPartSchema(tool.getToolType());
+
+        if (schema == null) return ctx;
+
+        Set<String> allTraitIds = new HashSet<>();
+        for (String partType : schema.partSlots.keySet()) {
+            PartSchema.SlotDef slot = schema.partSlots.get(partType);
+            if (slot == null) continue;
+            String materialId = ToolNBT.getMaterial(stack, partType);
+            MaterialDefinition mat = HonedRegistries.getMaterial(materialId);
+            if (mat != null && mat.traitIds != null) {
+                allTraitIds.addAll(mat.traitIds);
+            }
+        }
+        allTraitIds.addAll(ToolNBT.getAffixTraits(stack));
+        
+        for (String traitId : allTraitIds) {
+            ctx.addTrait(traitId);
+        }
+        return ctx;
     }
 }
